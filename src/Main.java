@@ -74,7 +74,7 @@ public class Main {
 
     public static void menu() { //metodo recursivo
         Scanner leitor = new Scanner(System.in);
-        System.out.println("1 - Cadastrar produto\n 2 - Deletar produto\n 3- Editar produto\n 4- Visualizar produto\n 5 - Sair");
+        System.out.println("1 - Cadastrar produto \n 2 - Deletar produto\n 3- Editar produto\n 4- Visualizar produto\n 5 - Sair");
         int opcao = leitor.nextInt();
         if (opcao == 1) {
             cadastroProd();

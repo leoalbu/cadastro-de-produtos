@@ -8,7 +8,7 @@ public class Produto {
     @Override
     public String toString() {
         return "Nome: " + this.nome + " Preço: " + this.preco + " Cor: " +
-                this.cor + "Descrição:   " + this.descricao + "Estoque: " + this.estoque;
+                this.cor + "Descrição :   " + this.descricao + "Estoque: " + this.estoque;
 
     }
 
