@@ -249,6 +249,23 @@ details p { color: var(--muted); padding-bottom: 1.3rem; }
 .form__status.ok { color: #059669; } .form__status.err { color: #dc2626; }
 .form__legal { font-size: .78rem; color: var(--muted); text-align: center; }
 
+/* Credentials */
+.cred { background: var(--dark); color: #fff; border-top: 1px solid rgba(255,255,255,.06); }
+.cred__inner { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 2rem; align-items: center; padding: 2.4rem 0; }
+.cred__intro { font-family: var(--display); font-size: 1.25rem; font-weight: 500; color: rgba(255,255,255,.85); text-wrap: balance; max-width: 22ch; }
+.cred__item { display: flex; align-items: center; gap: 1rem; padding-left: 2rem; border-left: 1px solid rgba(255,255,255,.1); }
+.cred__num { font-family: var(--display); font-size: clamp(2.4rem, 4vw, 3.2rem); font-weight: 700; line-height: 1; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; font-variant-numeric: tabular-nums; }
+.cred__label { color: rgba(255,255,255,.7); font-size: .98rem; line-height: 1.4; max-width: 20ch; }
+@media (max-width: 900px) {
+  .cred__inner { grid-template-columns: 1fr 1fr; }
+  .cred__intro { grid-column: 1 / -1; max-width: none; }
+  .cred__item:first-of-type { padding-left: 0; border-left: 0; }
+}
+@media (max-width: 520px) {
+  .cred__inner { grid-template-columns: 1fr; gap: 1.2rem; }
+  .cred__item { padding-left: 0; border-left: 0; }
+}
+
 /* Footer */
 .footer { background: #050a14; color: rgba(255,255,255,.55); padding: 2.2rem 0; font-size: .9rem; }
 .footer__inner { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
