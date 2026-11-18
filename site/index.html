@@ -8,11 +8,17 @@
   <meta property="og:title" content="Vértice CTO — CTO as a Service" />
   <meta property="og:description" content="Liderança técnica sênior, sob demanda. Decisões melhores, entregas mais rápidas e um time de tecnologia que escala com o seu negócio." />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="theme-color" content="#070d1a" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ProfessionalService","name":"Vértice CTO","description":"CTO as a Service: liderança de tecnologia sob demanda para startups e PMEs.","areaServed":"BR","serviceType":"CTO as a Service","email":"contato@verticecto.com.br"}
+  </script>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b1220'/%3E%3Cpath d='M8 9l8 15 8-15' fill='none' stroke='%2338bdf8' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
   <!-- ====== NAV ====== -->
@@ -22,14 +28,14 @@
         <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#0b1220"/><path d="M8 9l8 15 8-15" fill="none" stroke="url(#lg)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#818cf8"/></linearGradient></defs></svg>
         <span>Vértice<strong>CTO</strong></span>
       </a>
-      <nav class="nav__links" aria-label="Principal">
+      <nav class="nav__links" id="menu" aria-label="Principal">
         <a href="#servicos">Serviços</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#planos">Planos</a>
         <a href="#faq">FAQ</a>
       </nav>
       <a href="#contato" class="btn btn--primary btn--sm nav__cta">Agendar conversa</a>
-      <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+      <button class="nav__toggle" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false"><span></span><span></span></button>
     </div>
   </header>
 
@@ -44,7 +50,7 @@
           <h1>Liderança de tecnologia <span class="grad">sênior</span>, sem o custo de um CTO full-time.</h1>
           <p class="lead">Estratégia, arquitetura e gestão de time para startups e empresas que precisam acertar nas decisões técnicas — e entregar mais rápido — a partir de agora.</p>
           <div class="hero__actions">
-            <a href="#contato" class="btn btn--primary">Agendar diagnóstico gratuito <span aria-hidden="true">→</span></a>
+            <a href="#contato" class="btn btn--primary">Agendar conversa gratuita <span aria-hidden="true">→</span></a>
             <a href="#como-funciona" class="btn btn--ghost">Ver como funciona</a>
           </div>
           <ul class="hero__trust">
@@ -62,24 +68,24 @@
             </div>
             <div class="panel__body">
               <div class="metric">
-                <span class="metric__label">Frequência de deploy</span>
-                <span class="metric__value">2/mês <em>→</em> <b>diário</b></span>
+                <span class="metric__label">Entregas em produção</span>
+                <span class="metric__value">2/mês <em>→</em> <b>semanais</b></span>
                 <div class="bar"><span style="--w:92%"></span></div>
               </div>
               <div class="metric">
-                <span class="metric__label">Custo de nuvem</span>
+                <span class="metric__label">Custo de infraestrutura</span>
                 <span class="metric__value"><b>−35%</b> no trimestre</span>
                 <div class="bar bar--green"><span style="--w:65%"></span></div>
               </div>
               <div class="metric">
-                <span class="metric__label">Lead time de features</span>
+                <span class="metric__label">Tempo para lançar melhorias</span>
                 <span class="metric__value">6 sem <em>→</em> <b>8 dias</b></span>
                 <div class="bar bar--violet"><span style="--w:78%"></span></div>
               </div>
               <ul class="checklist">
                 <li class="done">Arquitetura revisada e documentada</li>
-                <li class="done">CI/CD e observabilidade em produção</li>
-                <li class="doing">Contratação: 2 devs sênior</li>
+                <li class="done">Processo de entregas padronizado</li>
+                <li class="doing">Contratação: 2 desenvolvedores sênior</li>
                 <li>Plano de segurança e LGPD</li>
               </ul>
             </div>
@@ -121,22 +127,22 @@
         </div>
         <div class="pains">
           <article class="pain reveal">
-            <span class="pain__icon">⏳</span>
+            <span class="pain__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9.5 2.5h5"/></svg></span>
             <h3>Entregas que nunca chegam</h3>
             <p>Prazos estourados, retrabalho e um backlog que só cresce — sem clareza do porquê.</p>
           </article>
           <article class="pain reveal">
-            <span class="pain__icon">💸</span>
+            <span class="pain__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 4 8-8"/><path d="M15 8h5v5"/></svg></span>
             <h3>Custos fora de controle</h3>
             <p>Nuvem, ferramentas e fornecedores consumindo orçamento sem retorno mensurável.</p>
           </article>
           <article class="pain reveal">
-            <span class="pain__icon">🧩</span>
+            <span class="pain__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-1 .7-1.5 1.2-1.5 2.5M12 17v.01"/></svg></span>
             <h3>Decisões técnicas no escuro</h3>
             <p>Escolher stack, fornecedor ou arquitetura sem alguém de confiança para validar.</p>
           </article>
           <article class="pain reveal">
-            <span class="pain__icon">🔐</span>
+            <span class="pain__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6l8-3z"/><path d="M12 8v5M12 16v.01"/></svg></span>
             <h3>Riscos invisíveis</h3>
             <p>Segurança, LGPD e dívida técnica que só aparecem na hora da auditoria ou do investimento.</p>
           </article>
@@ -150,7 +156,7 @@
         <div class="section__head reveal">
           <span class="kicker">Serviços</span>
           <h2>Tudo o que um CTO faz. Na medida que a sua empresa precisa.</h2>
-          <p>Atuação estratégica e prática — do board ao código, com foco em resultado de negócio.</p>
+          <p>Atuação estratégica, dos sócios ao time, com foco em resultado de negócio.</p>
         </div>
         <div class="services">
           <article class="service reveal">
@@ -266,8 +272,8 @@
           </li>
           <li class="step reveal">
             <span class="step__num">04</span>
-            <h3>Execução & liderança</h3>
-            <p>Atuação contínua como CTO: rituais com o time, decisões técnicas e reporte mensal de resultados.</p>
+            <h3>Acompanhamento</h3>
+            <p>Reuniões periódicas com sócios e lideranças, apoio às decisões técnicas e reporte mensal de resultados.</p>
           </li>
         </ol>
       </div>
@@ -282,7 +288,7 @@
         </div>
         <div class="stats">
           <div class="stat reveal"><span class="stat__num" data-count="40" data-prefix="até " data-suffix="%">até 40%</span><span class="stat__label">de redução em custos de nuvem e ferramentas</span></div>
-          <div class="stat reveal"><span class="stat__num" data-count="3" data-suffix="x">3x</span><span class="stat__label">mais entregas com o mesmo time</span></div>
+          <div class="stat reveal"><span class="stat__num" data-count="2" data-prefix="até " data-suffix="x">até 2x</span><span class="stat__label">mais entregas com o mesmo time</span></div>
           <div class="stat reveal"><span class="stat__num" data-count="90" data-suffix=" dias">90 dias</span><span class="stat__label">para um time e processo previsíveis</span></div>
           <div class="stat reveal"><span class="stat__num" data-count="100" data-suffix="%">100%</span><span class="stat__label">das decisões técnicas documentadas e justificadas</span></div>
         </div>
@@ -354,7 +360,7 @@
           </details>
           <details>
             <summary>Como é feito o acompanhamento?</summary>
-            <p>Com rituais combinados (reuniões semanais ou quinzenais), um canal direto de comunicação e um relatório mensal com indicadores, entregas e próximos passos.</p>
+            <p>Com reuniões periódicas combinadas no início (quinzenais no plano Advisor), um canal direto para dúvidas e um relatório mensal com indicadores, entregas e próximos passos.</p>
           </details>
           <details>
             <summary>Quantas empresas são atendidas ao mesmo tempo?</summary>
@@ -362,7 +368,7 @@
           </details>
           <details>
             <summary>Existe contrato de fidelidade?</summary>
-            <p>Não. Os planos são mensais e podem ser ajustados ou encerrados com 30 dias de aviso. Confidencialidade (NDA) é garantida desde o primeiro contato.</p>
+            <p>Não. O plano Advisor é mensal e pode ser ajustado ou encerrado com 30 dias de aviso. Projetos têm escopo, prazo e valor fechados na proposta. A confidencialidade (NDA) é garantida desde o primeiro contato.</p>
           </details>
           <details>
             <summary>Atendem presencialmente?</summary>
@@ -377,7 +383,7 @@
       <div class="container contact__inner">
         <div class="contact__copy reveal">
           <span class="kicker kicker--light">Vamos conversar</span>
-          <h2>Agende um diagnóstico gratuito de 30 minutos</h2>
+          <h2>Agende uma conversa gratuita de 30 minutos</h2>
           <p>Conte um pouco sobre o seu negócio. Retornamos em até 1 dia útil com uma proposta de próximos passos e a disponibilidade de agenda — sem compromisso.</p>
           <ul class="contact__list">
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:contato@verticecto.com.br">contato@verticecto.com.br</a></li>

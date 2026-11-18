@@ -99,10 +99,10 @@ const CONTACT_EMAIL = "contato@verticecto.com.br";
       `Nome: ${d.nome}\nEmpresa: ${d.empresa || "-"}\nE-mail: ${d.email}\nTelefone: ${d.telefone || "-"}\n` +
       `Interesse: ${d.plano || "Ainda não sei"}\n\nDesafio:\n${d.mensagem}`;
     window.location.href =
-      `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Diagnóstico gratuito — " + (d.empresa || d.nome))}` +
+      `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Conversa gratuita — " + (d.empresa || d.nome))}` +
       `&body=${encodeURIComponent(body)}`;
     status.className = "form__status ok";
-    status.textContent = "Obrigado! Abrimos o seu e-mail para concluir o envio.";
+    status.textContent = "Obrigado! Abrimos o seu programa de e-mail com a mensagem pronta. Se ele não abrir, escreva para " + CONTACT_EMAIL + ".";
   });
 
   document.getElementById("year").textContent = new Date().getFullYear();
