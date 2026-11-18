@@ -195,6 +195,7 @@ p { margin: 0; }
 .stat + .stat { border-left: 1px solid var(--line); }
 .stat__num { display: block; font-family: var(--display); font-size: clamp(2.1rem, 3.6vw, 3rem); font-weight: 700; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: .4rem; }
 .stat__label { color: var(--muted); font-size: .97rem; }
+.plans__seats { display: inline-flex; align-items: center; gap: .55rem; margin-top: 1rem; padding: .4rem .95rem; border-radius: 999px; background: rgba(34,197,94,.1); color: #047857; font-size: .88rem; font-weight: 600; }
 .footnote { text-align: center; color: var(--muted); font-size: .82rem; margin-top: 1.2rem; }
 
 /* Plans */
